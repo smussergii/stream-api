@@ -16,14 +16,12 @@ import java.util.function.BiPredicate;
  */
 public class Task01 {
 
-
     public static void main(String[] args) {
         String[] inputArr = new String[]{"Hello", "qwerty", "asda", "asdfa", "as", "a", "hdgyh", "hh", "mam"};
         Arrays.stream(processArrayWithExternalLambda(inputArr, 'a')).forEach(System.out::println);
         System.out.println();
         Arrays.stream(processArrayWithoutExternalLambda(inputArr, 'h')).forEach(System.out::println);
     }
-
 
     public static String[] processArrayWithExternalLambda(String[] inputArr, char givenChar) {
         return Arrays.stream(inputArr)
